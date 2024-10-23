@@ -4,6 +4,9 @@ body {
     color: #e4e4e4;
     margin: 5px;
     padding: 0px;
+    overflow-x: hidden; /* Desactivar el scroll horizontal */
+
+    
 }
 
 .container {
