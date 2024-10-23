@@ -8,15 +8,15 @@ body {
 
 
 .container {
-    width: 90%;
-    max-width: 800px;
+    width: 100%;
+    max-width: 85%;
     margin: 0 auto; 
     padding: 20px;
 }
 
 h2 {
     color: #ffffff;
-    margin-bottom: 15px;
+    margin-bottom: 10px;
 }
 
 
@@ -24,23 +24,46 @@ h2 {
     background-color: #1a1a1a;
     padding: 20px;
     border-radius: 10px;
-    margin-top: 20px;
+    margin-top: 10px;
+    
 }
 
 .profile-header {
     display: flex;
     align-items: center;
+   
+}
+
+.profile-photo-container {
+    position: relative;
+    width: 190px; 
+    height: 290px; 
+    border-radius: 50%; 
+    background: linear-gradient(135deg, #333,  #333); 
+    padding: 4px;  
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4); 
+    overflow: hidden; 
+    margin: 20px;
 }
 
 .profile-photo {
-    border-radius: 50%; 
-    margin-right: 10px;
-    width: 150px; 
-    height: 200px;
+    width: 100%; 
+    height: 100%; 
     object-fit: cover; 
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
-    border: 1px solid #111210; 
+    border-radius: 50%; 
+    transition: transform 0.3s ease-in-out, filter 0.3s ease-in-out;
+    max-width: 100%; 
+    max-height: 100%; 
 }
+
+.profile-photo:hover {
+    filter: grayscale(0%); 
+    transform: scale(1.05); 
+}
+
 
 
 .profile-info {
@@ -48,21 +71,26 @@ h2 {
 }
 
 .profile-info h1 {
-    margin: 0;
-    font-size: 28px;
+    margin: 1rem;
+    font-size: 30px;
     color: #ffffff;
 }
 
 .profile-info p {
-    margin: 5px 0;
-    font-size: 18px;
+    margin: 1rem;
+    margin-top: 3px;
+    font-size: 1.2rem;
     color: #a8a8a8;
+    line-height: 1.4; 
+    
 }
 
 .profile-details {
     display: flex;
     flex-direction: column;
-    margin-top: 10px;
+    margin: 1rem;
+    font-size: 1.2rem;
+    
 }
 
 .profile-details p {
@@ -73,6 +101,7 @@ h2 {
 
 .social-links {
     margin-top: 10px;
+    margin: 1rem;
 }
 
 .social-links a {
@@ -88,19 +117,23 @@ h2 {
 }
 
 /* Biografía de perfil */
+.technologies-section h1{
+    font-size: 30px;
+}
 .profile-bio {
     margin-top: 20px;
     padding-top: 20px;
     border-top: 1px solid #333;
+
 }
 
-.profile-bio h2 {
-    font-size: 24px;
+.profile-bio h1 {
+    font-size: 30px;
     color: #ffffff;
 }
 
 .profile-bio p {
-    font-size: 16px;
+    font-size: 18px;
     color: #e4e4e4;
 }
 /* Sección de Tecnologías */
@@ -110,19 +143,28 @@ h2 {
 }
 
 .technology-tags {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); 
+    gap: 10px; 
 }
 
 .tag {
     background-color: #53B365;
     color: #e4e4e4;
-    padding: 5px 15px;
-    border-radius: 20px;
-    font-size: 14px;
-    display: inline-block;
+    padding: 10px 20px;  
+    border-radius: 25px;  
+    font-size: 12px;  
+    display: flex; 
+    justify-content: center;
+    align-items: center; 
+    height: 20px; 
+
 }
+.tag:nth-last-child(1), 
+.tag:nth-last-child(2) { 
+    grid-column: span 2; 
+}
+
 
 /* Sección de Experiencia */
 .experience-section {
@@ -172,55 +214,75 @@ h2 {
     display: inline-block;
 }
 
-/* Sección de Proyectos */
+
+
+
+
+
+
 .projects-section {
-    padding: 20px;
     border-bottom: 1px solid #333;
+    padding: 20px; /* Aumentar el espacio interno */
+    max-width: 800px; /* Ancho máximo del contenedor */
+    margin: 0 auto; /* Centrar el contenedor */
+}
+
+.projects-section h1 {
+    font-size: 30px;
+    color: #ffffff; /* Asegúrate de que el título sea legible */
+    margin-bottom: 20px; /* Espacio entre el título y los proyectos */
 }
 
 .project-item {
     display: flex;
-    align-items: center;
-    justify-content: space-between;
-    margin-bottom: 20px;
+    align-items: flex-start; /* Alineación superior para mejor organización */
+    justify-content: flex-start; /* Alineación al inicio */
+    margin-bottom: 30px; /* Mayor espacio entre proyectos */
     background-color: #2d3436;
-    padding: 15px;
+    padding: 10px; /* Mayor padding interno para más espacio */
     border-radius: 10px;
+    flex-wrap: wrap; /* Permitir que el contenido se envuelva */
 }
 
 .project-item i {
-    font-size: 24px;
+    font-size: 28px; /* Aumenta el tamaño del ícono */
     color: #00ff40;
     margin-right: 15px;
 }
 
 .project-item div {
-    flex: 1;
+    flex: 1; /* El contenido ocupa el espacio restante */
 }
 
 .project-item h3 {
     margin: 0;
-    font-size: 20px;
+    font-size: 24px; /* Aumenta el tamaño del título */
     color: #ffffff;
 }
 
 .project-item p {
     margin: 5px 0;
-    font-size: 16px;
-    color: #a8a8a8;
+    font-size: 18px; /* Aumenta el tamaño del párrafo */
 }
 
 .project-item small {
-    color: #777;
+    color: #F2E6D5;
+    font-size: 14px; /* Aumenta el tamaño del texto pequeño */
 }
 
 .project-tags {
     margin-top: 10px;
-    gap: 10px;
+    display: flex; /* Cambiar a flex para mejor alineación */
+    flex-wrap: wrap; /* Permitir que las etiquetas se envuelvan */
+    gap: 10px; /* Espaciado entre etiquetas */
 }
 
 .project-tags .tag {
-    margin: 5px;
+    background-color: #53B365; /* Color de fondo para las etiquetas */
+    color: #e4e4e4; /* Color de texto de las etiquetas */
+    padding: 5px 10px; /* Espaciado interno de las etiquetas */
+    border-radius: 20px; /* Bordes redondeados */
+    font-size: 14px; /* Tamaño de fuente de las etiquetas */
 }
 
 .project-links {
@@ -239,10 +301,20 @@ h2 {
 }
 
 .project-item img {
-    max-width: 150px;
+    max-width: 250px; /* Aumenta el tamaño máximo de la imagen */
+    height: 250px; /* Altura de la imagen */
     border-radius: 10px;
     margin-left: 20px;
+    flex-shrink: 0; /* Evita que la imagen se reduzca */
+    cursor: pointer;
+    transition: transform 0.3s ease; /* Suaviza la transformación */
 }
+
+.project-item img:hover {
+    transform: scale(1.05); /* Escala la imagen un 5% al pasar el cursor */
+}
+
+
 
 /* Sección de Formación */
 .education-section {
@@ -260,25 +332,33 @@ h2 {
     color: #00ff40;
     margin-right: 15px;
 }
-
+.education-section h1 {
+    font-size: 30px;
+}
 .education-item div {
     flex: 1;
 }
-
+.education-item h1 {
+    margin: 0;
+    font-size: 30px;
+    color: #ffffff;
+}
 .education-item h3 {
     margin: 0;
-    font-size: 20px;
+    font-size: 22px;
     color: #ffffff;
 }
 
 .education-item p {
-    margin: 5px 0;
-    font-size: 16px;
+    margin: 20px 0;
+    font-size: 25px;
     color: #a8a8a8;
+
 }
 
 .education-item small {
     color: #777;
+    font-size: 17px;
 }
 
 /* Sección de Certificados */
@@ -292,6 +372,9 @@ h2 {
     gap: 20px;
     justify-content: space-between;
     flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); 
+    grid-gap: 20px; 
 }
 
 .certificate-item {
@@ -308,6 +391,22 @@ h2 {
     max-width: 100%;
     border-radius: 10px;
     margin-bottom: 10px;
+    width: 100%; 
+    height: auto; 
+    cursor: pointer;
+    transition: transform 0.3s ease; 
+}
+.certificate-item img:active {
+    transform: scale(1.5); 
+}
+
+img:fullscreen {
+    width: 100%;
+    height: auto;
+}
+
+img {
+    max-width: 100%;
 }
 
 .certificate-item h3 {
@@ -332,7 +431,7 @@ h2 {
 .footer p {
     margin: 0;
     color: #e4e4e4;
-    font-size: 16px;
+    font-size: 17px;
 }
 
 .footer .social-links {
@@ -342,7 +441,7 @@ h2 {
 .footer .social-links a {
     margin-right: 10px;
     color: #00ff40;
-    font-size: 18px;
+    font-size: 20px;
     text-decoration: none;
 }
 
