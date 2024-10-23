@@ -10,9 +10,9 @@ body {
 }
 
 .container {
-    width: 100%;
+    width: auto;
     max-width: 85%;
-    margin: 0 auto; 
+    margin: 30px; 
     padding: 20px;
 }
 
@@ -184,7 +184,7 @@ h2 {
 
 .titulo-proyect
 {
-  margin: 30px;
+  margin: 3.4rem;
 }
 .project-item {
     display: flex;
@@ -273,18 +273,29 @@ h2 {
 /* Sección de Formación */
 .education-section {
     padding: 20px;
+    margin-top: 10px;
 }
-
+.date {
+    font-size: 14px;
+    color: #53B365;
+    background-color: #2d3436;
+    padding: 5px 10px;
+    border-radius: 15px;
+    margin-top: 10px;
+    display: inline-block;
+}
 .education-item {
     display: flex;
     align-items: flex-start;
     margin-bottom: 20px;
+    margin-top: 10px;
 }
 
 .education-item i {
     font-size: 24px;
     color: #00ff40;
     margin-right: 15px;
+    margin-top: 10px;
 }
 
 .education-section h1 {
@@ -293,6 +304,7 @@ h2 {
 
 .education-item div {
     flex: 1;
+    margin-top: 10px;
 }
 
 .education-item h1 {
@@ -470,20 +482,15 @@ img {
     }
 
     .project-item img {
-        max-width: 100%;
+        max-width: 90%;
         height: auto;
     }
+    .titulo-proyect
+    {
+    margin: 1rem;
+    }
 }
-.project-item img {
-    max-width: 100%; /* Asegúrate de que la imagen no exceda el ancho del contenedor */
-    height: auto; /* Mantiene la proporción de aspecto */
-    border-radius: 10px;
-    margin-left: 20px;
-    flex-shrink: 0; /* Evita que la imagen se reduzca */
-    cursor: pointer;
-    transition: transform 0.3s ease; /* Suaviza la transformación */
-    
-}
+
 
 /* Ajustes específicos para responsividad */
 @media (max-width: 768px) {
@@ -494,14 +501,22 @@ img {
 
     .project-item img {
         margin-left: 0; /* Eliminar margen a la izquierda */
-        margin-bottom: 10px; /* Agregar espacio debajo de la imagen */
-        max-width: 90%; /* Limitar el ancho máximo de la imagen */
+        margin-bottom: auto; /* Agregar espacio debajo de la imagen */
+        max-width:auto; /* Limitar el ancho máximo de la imagen */
     }
 }
 
 @media (max-width: 480px) {
-    .project-item img {
-        max-width: 100%; /* Asegúrate de que las imágenes sean completamente responsivas */
-        height: auto; /* Mantiene la proporción de aspecto */
+    
+    .titulo-proyect
+    {
+    margin: 1.5rem;
+    }
+    .education-section h1 {
+        font-size: 35px;
+    }
+
+    .certificates-section h1{
+        font-size: 30px;
     }
 }
