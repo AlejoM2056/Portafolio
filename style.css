@@ -1,0 +1,351 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #111210;
+    color: #e4e4e4;
+    margin: 0;
+    padding: 0;
+}
+
+
+.container {
+    width: 90%;
+    max-width: 800px;
+    margin: 0 auto; 
+    padding: 20px;
+}
+
+h2 {
+    color: #ffffff;
+    margin-bottom: 15px;
+}
+
+
+.profile-section {
+    background-color: #1a1a1a;
+    padding: 20px;
+    border-radius: 10px;
+    margin-top: 20px;
+}
+
+.profile-header {
+    display: flex;
+    align-items: center;
+}
+
+.profile-photo {
+    border-radius: 50%; 
+    margin-right: 10px;
+    width: 150px; 
+    height: 200px;
+    object-fit: cover; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+    border: 1px solid #111210; 
+}
+
+
+.profile-info {
+    flex: 1;
+}
+
+.profile-info h1 {
+    margin: 0;
+    font-size: 28px;
+    color: #ffffff;
+}
+
+.profile-info p {
+    margin: 5px 0;
+    font-size: 18px;
+    color: #a8a8a8;
+}
+
+.profile-details {
+    display: flex;
+    flex-direction: column;
+    margin-top: 10px;
+}
+
+.profile-details p {
+    font-size: 16px;
+    color: #a8a8a8;
+    margin: 3px 0;
+}
+
+.social-links {
+    margin-top: 10px;
+}
+
+.social-links a {
+    margin-right: 10px;
+    color: #00ff40;
+    font-size: 20px;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.social-links a:hover {
+    color: #ffffff;
+}
+
+/* Biografía de perfil */
+.profile-bio {
+    margin-top: 20px;
+    padding-top: 20px;
+    border-top: 1px solid #333;
+}
+
+.profile-bio h2 {
+    font-size: 24px;
+    color: #ffffff;
+}
+
+.profile-bio p {
+    font-size: 16px;
+    color: #e4e4e4;
+}
+/* Sección de Tecnologías */
+.technologies-section {
+    padding: 20px;
+    border-bottom: 1px solid #333;
+}
+
+.technology-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.tag {
+    background-color: #53B365;
+    color: #e4e4e4;
+    padding: 5px 15px;
+    border-radius: 20px;
+    font-size: 14px;
+    display: inline-block;
+}
+
+/* Sección de Experiencia */
+.experience-section {
+    padding: 20px;
+    border-bottom: 1px solid #333;
+}
+
+.experience-item {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 20px;
+}
+
+.experience-item i {
+    font-size: 24px;
+    color: #00ff40;
+    margin-right: 15px;
+}
+
+.experience-item div {
+    flex: 1;
+}
+
+.experience-item h3 {
+    margin: 0;
+    font-size: 20px;
+    color: #ffffff;
+}
+
+.experience-item p {
+    margin: 5px 0;
+    font-size: 16px;
+    color: #a8a8a8;
+}
+
+.experience-item small {
+    color: #777;
+}
+
+.date {
+    font-size: 14px;
+    color: #53B365;
+    background-color: #2d3436;
+    padding: 5px 10px;
+    border-radius: 15px;
+    margin-top: 5px;
+    display: inline-block;
+}
+
+/* Sección de Proyectos */
+.projects-section {
+    padding: 20px;
+    border-bottom: 1px solid #333;
+}
+
+.project-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    background-color: #2d3436;
+    padding: 15px;
+    border-radius: 10px;
+}
+
+.project-item i {
+    font-size: 24px;
+    color: #00ff40;
+    margin-right: 15px;
+}
+
+.project-item div {
+    flex: 1;
+}
+
+.project-item h3 {
+    margin: 0;
+    font-size: 20px;
+    color: #ffffff;
+}
+
+.project-item p {
+    margin: 5px 0;
+    font-size: 16px;
+    color: #a8a8a8;
+}
+
+.project-item small {
+    color: #777;
+}
+
+.project-tags {
+    margin-top: 10px;
+    gap: 10px;
+}
+
+.project-tags .tag {
+    margin: 5px;
+}
+
+.project-links {
+    margin-top: 10px;
+}
+
+.project-link {
+    color: #00ff40;
+    margin-right: 10px;
+    font-size: 18px;
+    text-decoration: none;
+}
+
+.project-link:hover {
+    color: #ffffff;
+}
+
+.project-item img {
+    max-width: 150px;
+    border-radius: 10px;
+    margin-left: 20px;
+}
+
+/* Sección de Formación */
+.education-section {
+    padding: 20px;
+}
+
+.education-item {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 20px;
+}
+
+.education-item i {
+    font-size: 24px;
+    color: #00ff40;
+    margin-right: 15px;
+}
+
+.education-item div {
+    flex: 1;
+}
+
+.education-item h3 {
+    margin: 0;
+    font-size: 20px;
+    color: #ffffff;
+}
+
+.education-item p {
+    margin: 5px 0;
+    font-size: 16px;
+    color: #a8a8a8;
+}
+
+.education-item small {
+    color: #777;
+}
+
+/* Sección de Certificados */
+.certificates-section {
+    padding: 20px;
+    border-bottom: 1px solid #333;
+}
+
+.certificates-gallery {
+    display: flex;
+    gap: 20px;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.certificate-item {
+    background-color: #2d3436;
+    border-radius: 10px;
+    padding: 10px;
+    text-align: center;
+    flex: 1;
+    margin-bottom: 20px;
+    max-width: 300px;
+}
+
+.certificate-item img {
+    max-width: 100%;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+.certificate-item h3 {
+    font-size: 18px;
+    color: #00ff40;
+    margin-bottom: 5px;
+}
+
+.certificate-item p {
+    font-size: 14px;
+    color: #e4e4e4;
+}
+
+/* Pie de página */
+.footer {
+    padding: 20px;
+    text-align: center;
+    border-top: 1px solid #333;
+    margin-top: 20px;
+}
+
+.footer p {
+    margin: 0;
+    color: #e4e4e4;
+    font-size: 16px;
+}
+
+.footer .social-links {
+    margin-top: 10px;
+}
+
+.footer .social-links a {
+    margin-right: 10px;
+    color: #00ff40;
+    font-size: 18px;
+    text-decoration: none;
+}
+
+.footer .social-links a:hover {
+    color: #ffffff;
+}
