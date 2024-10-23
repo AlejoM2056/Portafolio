@@ -4,7 +4,7 @@ body {
     color: #e4e4e4;
     margin: 5px;
     padding: 0px;
-    overflow-x: hidden; /* Desactivar el scroll horizontal */
+    overflow-x: hidden; 
 
     
 }
@@ -22,42 +22,30 @@ h2 {
     margin-bottom: 10px;
 }
 
-.profile-section {
-    background-color: #1a1a1a;
-    padding: 20px;
-    border-radius: 10px;
-    margin-top: 10px;
-}
-
-.profile-header {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
 .profile-photo-container {
-    position: relative;
-    width: 190px; 
-    height: 290px; 
-    border-radius: 50%; 
-    background: linear-gradient(135deg, #333, #333); 
+    width: 150px;
+    height: 220px;
+    position: relative; 
+    background: linear-gradient(#1a1a1a); 
     padding: 4px;  
     display: flex;
     align-items: center;
     justify-content: center;
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4); 
+    box-shadow: 0 8px 16px #1a1a1a; 
     overflow: hidden; 
     margin: 20px;
+    filter: grayscale(100%); 
+    background-color: transparent; 
+    
 }
-
 .profile-photo {
     width: 100%; 
     height: 100%; 
     object-fit: cover; 
-    border-radius: 50%; 
     transition: transform 0.3s ease-in-out, filter 0.3s ease-in-out;
     max-width: 100%; 
     max-height: 100%; 
+    
 }
 
 .profile-photo:hover {
@@ -65,30 +53,40 @@ h2 {
     transform: scale(1.05); 
 }
 
+.profile-section {
+    background-color: #1a1a1a;
+    padding: 20px;
+    border-radius: 10px;
+    margin-top: 20px;
+}
+
+.profile-header {
+    display: flex;
+    align-items: center;
+}
+
+
+
 .profile-info {
     flex: 1;
-    text-align: center;
 }
 
 .profile-info h1 {
-    margin: 1rem;
-    font-size: 30px;
+    margin: 0;
+    font-size: 28px;
     color: #ffffff;
 }
 
 .profile-info p {
-    margin: 1rem;
-    margin-top: 3px;
-    font-size: 1.2rem;
+    margin: 5px 0;
+    font-size: 18px;
     color: #a8a8a8;
-    line-height: 1.4; 
 }
 
 .profile-details {
     display: flex;
     flex-direction: column;
-    margin: 1rem;
-    font-size: 1.2rem;
+    margin-top: 10px;
 }
 
 .profile-details p {
@@ -99,7 +97,6 @@ h2 {
 
 .social-links {
     margin-top: 10px;
-    margin: 1rem;
 }
 
 .social-links a {
@@ -113,10 +110,13 @@ h2 {
 .social-links a:hover {
     color: #ffffff;
 }
-
 /* Biografía de perfil */
 
-
+.linea{
+    border-top: 1px solid #333;
+    margin-top: 20px;
+    padding-top: 20px;
+}
 .profile-bio {
     margin-top: 20px;
     padding-top: 20px;
@@ -138,34 +138,65 @@ h2 {
     padding: 20px;
     border-bottom: 1px solid #333;
 }
-.technologies-section h1{
+
+.technologies-section h1 {
     font-size: 30px;
+    color: white; /* Color verde para el título */
+
+    margin-bottom: 20px;
 }
+
 .technology-tags {
     display: grid;
     grid-template-columns: repeat(4, 1fr); 
-    gap: 10px; 
+    gap: 10px; /* Mantener el espaciado original */
+    content: "";
+    top: 0;
+    left: 0;
+    cursor: pointer;
+    position: relative;
+    padding: 16px 32px;
+    color: #FFF;
+    font-size: 24px;
+   
 }
 
 .tag {
-    background-color: #53B365;
-    color: #e4e4e4;
-    padding: 10px 20px;  
+    background: linear-gradient(135deg, #53B365, #33A652); /* Aplicar el gradiente de colores verdes */
+    color: #ffffff; /* Texto blanco */
+    padding: 10px 20px;  /* Mantener el padding original */
     border-radius: 25px;  
-    font-size: 12px;  
+    font-size: 12px;  /* Mantener el tamaño original de la fuente */
     display: flex; 
     justify-content: center;
     align-items: center; 
-    height: 20px; 
+    height: 20px; /* Mantener la altura original */
+    transition: transform 0.3s ease, background 0.3s ease; /* Transiciones suaves */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2); /* Sombra para dar profundidad */
+}
+
+.tag:hover {
+    transform: scale(1.05); /* Ligero aumento al pasar el cursor */
+    background: linear-gradient(135deg, #33A652, #53B365); /* Invertir el gradiente al hacer hover */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3); /* Aumentar la sombra al hacer hover */
 }
 
 .tag:nth-last-child(1), 
 .tag:nth-last-child(2) { 
-    grid-column: span 2; 
+    grid-column: span 2; /* Mantener la estructura original de las últimas etiquetas */
+}
+.tag span {
+    transition: transform 0.3s ease, background 0.3s ease; /* Transiciones suaves */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2); /* Sombra para dar profundidad */
+    padding: 10px 20px; /* Mantener padding dentro del span */
 }
 
-
-
+.tag span:hover {
+    transform: scale(1.05); /* Ligero aumento al pasar el cursor */
+    background: linear-gradient(135deg, #33A652, #53B365); /* Gradiente en el fondo del span */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3); /* Aumentar la sombra al hacer hover */
+    color: #ffffff; /* Cambiar color de texto a blanco */
+}
 
 /* Sección de Proyectos */
 
@@ -272,34 +303,38 @@ h2 {
 
 /* Sección de Formación */
 .education-section {
-    padding: 20px;
+    padding: 30px;
     margin-top: 10px;
 }
 .date {
-    font-size: 14px;
+    font-size: 18px;
     color: #53B365;
     background-color: #2d3436;
     padding: 5px 10px;
     border-radius: 15px;
     margin-top: 10px;
     display: inline-block;
+    transition: transform 0.3s ease, background 0.3s ease; 
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2); 
+    margin-left: 10px;
+
 }
 .education-item {
     display: flex;
     align-items: flex-start;
-    margin-bottom: 20px;
+    margin-bottom: 30px;
     margin-top: 10px;
 }
 
 .education-item i {
-    font-size: 24px;
+    font-size: 35px;
     color: #00ff40;
-    margin-right: 15px;
+    margin-right: 20px;
     margin-top: 10px;
 }
 
 .education-section h1 {
-    font-size: 30px;
+    font-size: 35px;
 }
 
 .education-item div {
@@ -309,30 +344,77 @@ h2 {
 
 .education-item h1 {
     margin: 0;
-    font-size: 30px;
+    font-size: 50px;
     color: #ffffff;
 }
 
 .education-item h3 {
     margin: 0;
-    font-size: 22px;
+    font-size: 30px;
     color: #ffffff;
 }
 
 .education-item p {
     margin: 20px 0;
-    font-size: 25px;
-    color: #a8a8a8;
+    font-size: 30px;
+    color: #e4e4e4;
 }
 
 .education-item small {
-    color: #777;
-    font-size: 17px;
+    color: #e4e4e4;
+    font-size: 20px;
 }
 
 /* Sección de Certificados */
+
+.titulo-certificado{
+    margin-left: 3.4rem;
+    padding: 0%;
+}
+.certificates-sectio-campus {
+    padding-top: 0%;
+    margin-top: 0%;
+    border-bottom: 1px solid #333;
+    height: 100vh;  /* Altura total de la pantalla */
+    display: flex;
+    justify-content: center;  /* Centrar horizontalmente */
+    align-items: center;  /* Centrar verticalmente */
+}
+
+.certificate-solo {
+    background-color: #2d3436;
+    border-radius: 10px;
+    text-align: center;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+    width: 100%; /* Ocupará el 100% del contenedor pero sin sobrepasar el ancho de pantalla */
+    max-width: 500px; 
+    padding: 0; 
+}
+
+.certificate-solo img {
+    width: 100%; /* La imagen ocupará todo el ancho del contenedor */
+    height: auto;
+    display: block;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.certificate-solo img:active {
+    transform: scale(1.5); /* Efecto de zoom al hacer clic */
+}
+
+
+  /* Eliminar margen superior */
+.certificates-section h1{
+    font-size: 37px;
+    margin-left: 10px;
+}
 .certificates-section {
-    padding: 20px;
+    padding: 10px;
+    padding-top: 0; /* Eliminar padding superior */
+    margin-top: 0;  /* Eliminar margen superior */
     border-bottom: 1px solid #333;
 }
 
@@ -504,6 +586,10 @@ img {
         margin-bottom: auto; /* Agregar espacio debajo de la imagen */
         max-width:auto; /* Limitar el ancho máximo de la imagen */
     }
+    .titulo-certificado{
+        margin-left: 3.4rem;
+        padding: 0%;
+    }
 }
 
 @media (max-width: 480px) {
@@ -518,5 +604,9 @@ img {
 
     .certificates-section h1{
         font-size: 30px;
+    }
+    .titulo-certificado{
+        margin-left: 3.4rem;
+        padding: 0%;
     }
 }
