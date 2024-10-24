@@ -4,15 +4,15 @@ body {
     color: #e4e4e4;
     margin: 5px;
     padding: 0px;
-    overflow-x: hidden; 
+    overflow-x: hidden;
 
-    
+
 }
 
 .container {
     width: auto;
     max-width: 85%;
-    margin: 30px; 
+    margin: 30px;
     padding: 20px;
 }
 
@@ -23,34 +23,42 @@ h2 {
 }
 
 .profile-photo-container {
-    width: 150px;
-    height: 220px;
-    position: relative; 
-    background: linear-gradient(#1a1a1a); 
-    padding: 4px;  
+    width: 300px; 
+    height: auto;
+    position: relative;
+    background: linear-gradient(#1a1a1a);
+    padding: 4px;
     display: flex;
     align-items: center;
     justify-content: center;
-    box-shadow: 0 8px 16px #1a1a1a; 
-    overflow: hidden; 
+    box-shadow: 0 8px 16px #1a1a1a;
+    overflow: hidden;
     margin: 20px;
-    filter: grayscale(100%); 
-    background-color: transparent; 
-    
+    filter: grayscale(100%);
+    background-color: transparent;
+
 }
+
 .profile-photo {
-    width: 100%; 
-    height: 100%; 
-    object-fit: cover; 
+    width: 100%;
+    height: 200%;
+    object-fit: cover;
     transition: transform 0.3s ease-in-out, filter 0.3s ease-in-out;
-    max-width: 100%; 
-    max-height: 100%; 
-    
+    max-width: 200%;
+    max-height: 100%;
+    background: #1a1a1a;
+    filter: contrast(120%) brightness(0.9);
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    mask-image: linear-gradient(to bottom, rgba(26, 26, 26, 1), rgba(26, 26, 26, 0));
+    background-color: transparent;
+
+
 }
 
 .profile-photo:hover {
-    filter: grayscale(0%); 
-    transform: scale(1.05); 
+    filter: grayscale(0%);
+    transform: scale(1.05);
 }
 
 .profile-section {
@@ -110,13 +118,15 @@ h2 {
 .social-links a:hover {
     color: #ffffff;
 }
+
 /* Biografía de perfil */
 
-.linea{
+.linea {
     border-top: 1px solid #333;
     margin-top: 20px;
     padding-top: 20px;
 }
+
 .profile-bio {
     margin-top: 20px;
     padding-top: 20px;
@@ -141,15 +151,17 @@ h2 {
 
 .technologies-section h1 {
     font-size: 30px;
-    color: white; /* Color verde para el título */
+    color: white;
+    /* Color verde para el título */
 
     margin-bottom: 20px;
 }
 
 .technology-tags {
     display: grid;
-    grid-template-columns: repeat(4, 1fr); 
-    gap: 10px; /* Mantener el espaciado original */
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    /* Mantener el espaciado original */
     content: "";
     top: 0;
     left: 0;
@@ -158,123 +170,167 @@ h2 {
     padding: 16px 32px;
     color: #FFF;
     font-size: 24px;
-   
+
 }
 
 .tag {
-    background: linear-gradient(135deg, #53B365, #33A652); /* Aplicar el gradiente de colores verdes */
-    color: #ffffff; /* Texto blanco */
-    padding: 10px 20px;  /* Mantener el padding original */
-    border-radius: 25px;  
-    font-size: 12px;  /* Mantener el tamaño original de la fuente */
-    display: flex; 
+    background: linear-gradient(135deg, #53B365, #33A652);
+    /* Aplicar el gradiente de colores verdes */
+    color: #ffffff;
+    /* Texto blanco */
+    padding: 10px 20px;
+    /* Mantener el padding original */
+    border-radius: 25px;
+    font-size: 12px;
+    /* Mantener el tamaño original de la fuente */
+    display: flex;
     justify-content: center;
-    align-items: center; 
-    height: 20px; /* Mantener la altura original */
-    transition: transform 0.3s ease, background 0.3s ease; /* Transiciones suaves */
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2); /* Sombra para dar profundidad */
+    align-items: center;
+    height: 20px;
+    /* Mantener la altura original */
+    transition: transform 0.3s ease, background 0.3s ease;
+    /* Transiciones suaves */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    /* Sombra para dar profundidad */
 }
 
 .tag:hover {
-    transform: scale(1.05); /* Ligero aumento al pasar el cursor */
-    background: linear-gradient(135deg, #33A652, #53B365); /* Invertir el gradiente al hacer hover */
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3); /* Aumentar la sombra al hacer hover */
+    transform: scale(1.05);
+    /* Ligero aumento al pasar el cursor */
+    background: linear-gradient(135deg, #33A652, #53B365);
+    /* Invertir el gradiente al hacer hover */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+    /* Aumentar la sombra al hacer hover */
 }
 
-.tag:nth-last-child(1), 
-.tag:nth-last-child(2) { 
-    grid-column: span 2; /* Mantener la estructura original de las últimas etiquetas */
+.tag:nth-last-child(1),
+.tag:nth-last-child(2) {
+    grid-column: span 2;
+    /* Mantener la estructura original de las últimas etiquetas */
 }
+
 .tag span {
-    transition: transform 0.3s ease, background 0.3s ease; /* Transiciones suaves */
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2); /* Sombra para dar profundidad */
-    padding: 10px 20px; /* Mantener padding dentro del span */
+    transition: transform 0.3s ease, background 0.3s ease;
+    /* Transiciones suaves */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    /* Sombra para dar profundidad */
+    padding: 10px 20px;
+    /* Mantener padding dentro del span */
 }
 
 .tag span:hover {
-    transform: scale(1.05); /* Ligero aumento al pasar el cursor */
-    background: linear-gradient(135deg, #33A652, #53B365); /* Gradiente en el fondo del span */
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3); /* Aumentar la sombra al hacer hover */
-    color: #ffffff; /* Cambiar color de texto a blanco */
+    transform: scale(1.05);
+    /* Ligero aumento al pasar el cursor */
+    background: linear-gradient(135deg, #33A652, #53B365);
+    /* Gradiente en el fondo del span */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+    /* Aumentar la sombra al hacer hover */
+    color: #ffffff;
+    /* Cambiar color de texto a blanco */
 }
 
 /* Sección de Proyectos */
 
 .projects-section {
     border-bottom: 1px solid #333;
-    padding: 20px; /* Aumentar el padding interno */
-    max-width: 800px; /* Ancho máximo del contenedor */
-    margin: 0 auto; /* Centrar el contenedor */
+    padding: 20px;
+    /* Aumentar el padding interno */
+    max-width: 800px;
+    /* Ancho máximo del contenedor */
+    margin: 0 auto;
+    /* Centrar el contenedor */
 }
 
 .projects-section h1 {
     font-size: 20px;
-    color: #ffffff; /* Asegúrate de que el título sea legible */
-    margin-bottom:30px; /* Aumentar el espacio entre el título y los proyectos */
+    color: #ffffff;
+    /* Asegúrate de que el título sea legible */
+    margin-bottom: 30px;
+    /* Aumentar el espacio entre el título y los proyectos */
 }
 
-.titulo-proyect
-{
-  margin: 3.4rem;
+.titulo-proyect {
+    margin: 3.4rem;
 }
+
 .project-item {
     display: flex;
-    align-items: flex-start; /* Alineación superior para mejor organización */
-    justify-content: flex-start; /* Alineación al inicio */
-    margin-bottom: 40px; /* Aumentar el espacio entre proyectos */
+    align-items: flex-start;
+    /* Alineación superior para mejor organización */
+    justify-content: flex-start;
+    /* Alineación al inicio */
+    margin-bottom: 40px;
+    /* Aumentar el espacio entre proyectos */
     background-color: #2d3436;
-    padding: 15px; /* Mayor padding interno para más espacio */
+    padding: 15px;
+    /* Mayor padding interno para más espacio */
     border-radius: 10px;
-    flex-wrap: wrap; /* Permitir que el contenido se envuelva */
+    flex-wrap: wrap;
+    /* Permitir que el contenido se envuelva */
 }
 
 .project-item i {
-    font-size: 28px; /* Aumenta el tamaño del ícono */
+    font-size: 28px;
+    /* Aumenta el tamaño del ícono */
     color: #00ff40;
     margin-right: 15px;
 }
 
 .project-item div {
-    flex: 1; /* El contenido ocupa el espacio restante */
+    flex: 1;
+    /* El contenido ocupa el espacio restante */
 }
 
 .project-item h3 {
     margin: 0;
-    font-size: 24px; /* Aumenta el tamaño del título */
+    font-size: 24px;
+    /* Aumenta el tamaño del título */
     color: #ffffff;
 }
 
 .project-item p {
     margin: 5px 0;
-    font-size: 18px; /* Aumenta el tamaño del párrafo */
+    font-size: 18px;
+    /* Aumenta el tamaño del párrafo */
 }
 
 .project-item small {
     color: #F2E6D5;
-    font-size: 14px; /* Aumenta el tamaño del texto pequeño */
+    font-size: 14px;
+    /* Aumenta el tamaño del texto pequeño */
 }
 
 .project-tags {
-    margin-top: 15px; /* Aumentar el espacio entre el contenido y las etiquetas */
-    display: flex; /* Cambiar a flex para mejor alineación */
-    flex-wrap: wrap; /* Permitir que las etiquetas se envuelvan */
-    gap: 10px; /* Espaciado entre etiquetas */
+    margin-top: 15px;
+    /* Aumentar el espacio entre el contenido y las etiquetas */
+    display: flex;
+    /* Cambiar a flex para mejor alineación */
+    flex-wrap: wrap;
+    /* Permitir que las etiquetas se envuelvan */
+    gap: 10px;
+    /* Espaciado entre etiquetas */
 }
 
 .project-links {
-    margin-top: 15px; /* Aumentar el espacio entre los enlaces del proyecto */
+    margin-top: 15px;
+    /* Aumentar el espacio entre los enlaces del proyecto */
 }
 
 .project-links {
-    margin-top: 20px; /* Aumentar el espacio entre los enlaces del proyecto */
-    display: flex; /* Hacer que los enlaces se comporten como un flex container */
-    justify-content: center; /* Centrar los enlaces horizontalmente */
-    flex-wrap: wrap; /* Permitir que los enlaces se envuelvan si son muchos */
+    margin-top: 20px;
+    /* Aumentar el espacio entre los enlaces del proyecto */
+    display: flex;
+    /* Hacer que los enlaces se comporten como un flex container */
+    justify-content: center;
+    /* Centrar los enlaces horizontalmente */
+    flex-wrap: wrap;
+    /* Permitir que los enlaces se envuelvan si son muchos */
 }
 
 .project-link {
     color: #00ff40;
-    margin: 0 15px; /* Ajustar margen a los lados */
+    margin: 0 15px;
+    /* Ajustar margen a los lados */
     font-size: 18px;
     text-decoration: none;
 }
@@ -285,20 +341,25 @@ h2 {
 }
 
 .project-item img {
-    max-width: 100%; /* Asegúrate de que la imagen no exceda el ancho del contenedor */
-    height: auto; /* Mantiene la proporción de aspecto */
+    max-width: 100%;
+    /* Asegúrate de que la imagen no exceda el ancho del contenedor */
+    height: auto;
+    /* Mantiene la proporción de aspecto */
     border-radius: 10px;
     margin-left: 20px;
-    flex-shrink: 0; /* Evita que la imagen se reduzca */
+    flex-shrink: 0;
+    /* Evita que la imagen se reduzca */
     cursor: pointer;
-    transition: transform 0.3s ease; /* Suaviza la transformación */
+    transition: transform 0.3s ease;
+    /* Suaviza la transformación */
 }
 
 
 /* Añadir un máximo de ancho para la imagen */
 
 .project-item img:hover {
-    transform: scale(1.05); /* Escala la imagen un 5% al pasar el cursor */
+    transform: scale(1.05);
+    /* Escala la imagen un 5% al pasar el cursor */
 }
 
 /* Sección de Formación */
@@ -306,6 +367,7 @@ h2 {
     padding: 30px;
     margin-top: 10px;
 }
+
 .date {
     font-size: 18px;
     color: #53B365;
@@ -314,11 +376,12 @@ h2 {
     border-radius: 15px;
     margin-top: 10px;
     display: inline-block;
-    transition: transform 0.3s ease, background 0.3s ease; 
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2); 
+    transition: transform 0.3s ease, background 0.3s ease;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
     margin-left: 10px;
 
 }
+
 .education-item {
     display: flex;
     align-items: flex-start;
@@ -367,20 +430,24 @@ h2 {
 
 /* Sección de Certificados */
 
-.titulo-certificado{
+.titulo-certificado {
     margin-left: 3.4rem;
     padding: 0%;
     margin-top: 0;
     padding-top: 0;
 }
-.certificates-sectio-campus-section{
+
+.certificates-sectio-campus-section {
     padding-top: 0%;
     margin-top: 0%;
     border-bottom: 1px solid #333;
-    height: 100vh;  /* Altura total de la pantalla */
+    height: 100vh;
+    /* Altura total de la pantalla */
     display: flex;
-    justify-content: center;  /* Centrar horizontalmente */
-    align-items: center;  /* Centrar verticalmente */
+    justify-content: center;
+    /* Centrar horizontalmente */
+    align-items: center;
+    /* Centrar verticalmente */
     margin-top: 0;
     padding-top: 0;
 }
@@ -391,15 +458,17 @@ h2 {
     text-align: center;
     cursor: pointer;
     transition: transform 0.3s ease;
-    width: 100%; /* Ocupará el 100% del contenedor pero sin sobrepasar el ancho de pantalla */
-    max-width: 550px; 
-    padding: 0; 
+    width: 100%;
+    /* Ocupará el 100% del contenedor pero sin sobrepasar el ancho de pantalla */
+    max-width: 550px;
+    padding: 0;
     padding-top: 0;
     margin-bottom: 0px;
 }
 
 .certificate-solo img {
-    width: 100%; /* La imagen ocupará todo el ancho del contenedor */
+    width: 100%;
+    /* La imagen ocupará todo el ancho del contenedor */
     height: 90%;
     display: block;
     border-radius: 10px;
@@ -410,27 +479,31 @@ h2 {
 }
 
 .certificate-solo img:active {
-    transform: scale(1.5); /* Efecto de zoom al hacer clic */
+    transform: scale(1.5);
+    /* Efecto de zoom al hacer clic */
 }
 
 
-  /* Eliminar margen superior */
-.certificates-section h1{
+/* Eliminar margen superior */
+.certificates-section h1 {
     font-size: 37px;
     margin-left: 10px;
     margin-top: 0;
     padding-top: 0;
 }
+
 .certificates-section {
     padding: 10px;
-    padding-top: 0; /* Eliminar padding superior */
-    margin-top: 0;  /* Eliminar margen superior */
+    padding-top: 0;
+    /* Eliminar padding superior */
+    margin-top: 0;
+    /* Eliminar margen superior */
     border-bottom: 1px solid #333;
 }
 
 .certificates-gallery {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); 
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
     gap: 20px;
 }
 
@@ -447,14 +520,14 @@ h2 {
     max-width: 100%;
     border-radius: 10px;
     margin-bottom: 10px;
-    width: 100%; 
-    height: auto; 
+    width: 100%;
+    height: auto;
     cursor: pointer;
-    transition: transform 0.3s ease; 
+    transition: transform 0.3s ease;
 }
 
 .certificate-item img:active {
-    transform: scale(1.5); 
+    transform: scale(1.5);
 }
 
 img:fullscreen {
@@ -528,7 +601,9 @@ img {
         grid-template-columns: repeat(2, 1fr);
     }
 
-    .experience-item, .education-item, .project-item {
+    .experience-item,
+    .education-item,
+    .project-item {
         flex-direction: column;
         align-items: flex-start;
     }
@@ -548,7 +623,9 @@ img {
         padding: 10px;
     }
 
-    h2, .projects-section h1, .education-section h1 {
+    h2,
+    .projects-section h1,
+    .education-section h1 {
         font-size: 24px;
     }
 
@@ -576,9 +653,9 @@ img {
         max-width: 90%;
         height: auto;
     }
-    .titulo-proyect
-    {
-    margin: 1rem;
+
+    .titulo-proyect {
+        margin: 1rem;
     }
 }
 
@@ -586,16 +663,22 @@ img {
 /* Ajustes específicos para responsividad */
 @media (max-width: 768px) {
     .project-item {
-        flex-direction: column; /* Cambiar a columna en pantallas más pequeñas */
-        align-items: center; /* Centrar elementos */
+        flex-direction: column;
+        /* Cambiar a columna en pantallas más pequeñas */
+        align-items: center;
+        /* Centrar elementos */
     }
 
     .project-item img {
-        margin-left: 0; /* Eliminar margen a la izquierda */
-        margin-bottom: auto; /* Agregar espacio debajo de la imagen */
-        max-width:auto; /* Limitar el ancho máximo de la imagen */
+        margin-left: 0;
+        /* Eliminar margen a la izquierda */
+        margin-bottom: auto;
+        /* Agregar espacio debajo de la imagen */
+        max-width: auto;
+        /* Limitar el ancho máximo de la imagen */
     }
-    .titulo-certificado{
+
+    .titulo-certificado {
         margin-left: 3.4rem;
         padding: 0%;
         padding-top: 0;
@@ -603,19 +686,20 @@ img {
 }
 
 @media (max-width: 480px) {
-    
-    .titulo-proyect
-    {
-    margin: 1.5rem;
+
+    .titulo-proyect {
+        margin: 1.5rem;
     }
+
     .education-section h1 {
         font-size: 35px;
     }
 
-    .certificates-section h1{
+    .certificates-section h1 {
         font-size: 30px;
     }
-    .titulo-certificado{
+
+    .titulo-certificado {
         margin-left: 3.4rem;
         padding: 0%;
         padding-top: 0;
