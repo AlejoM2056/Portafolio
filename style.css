@@ -881,6 +881,23 @@ img {
 
 @media (max-width: 480px) {
 
+    .profile-section {
+        width: 1000%; 
+        margin: 0 auto; 
+    }
+
+    .profile-header {
+        text-align: center; 
+    }
+
+    .profile-photo-container {
+        margin: 0 auto; /* Centra la imagen */
+    }
+
+    .profile-photo {
+        max-width: 100%; 
+        height: auto; 
+    }
     .titulo-proyect {
         margin: 1.5rem;
     }
