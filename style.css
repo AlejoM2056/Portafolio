@@ -370,8 +370,10 @@ h2 {
 .titulo-certificado{
     margin-left: 3.4rem;
     padding: 0%;
+    margin-top: 0;
+    padding-top: 0;
 }
-.certificates-sectio-campus {
+.certificates-sectio-campus-section{
     padding-top: 0%;
     margin-top: 0%;
     border-bottom: 1px solid #333;
@@ -379,6 +381,8 @@ h2 {
     display: flex;
     justify-content: center;  /* Centrar horizontalmente */
     align-items: center;  /* Centrar verticalmente */
+    margin-top: 0;
+    padding-top: 0;
 }
 
 .certificate-solo {
@@ -388,17 +392,21 @@ h2 {
     cursor: pointer;
     transition: transform 0.3s ease;
     width: 100%; /* Ocupará el 100% del contenedor pero sin sobrepasar el ancho de pantalla */
-    max-width: 500px; 
+    max-width: 550px; 
     padding: 0; 
+    padding-top: 0;
+    margin-bottom: 0px;
 }
 
 .certificate-solo img {
     width: 100%; /* La imagen ocupará todo el ancho del contenedor */
-    height: auto;
+    height: 90%;
     display: block;
     border-radius: 10px;
     cursor: pointer;
     transition: transform 0.3s ease;
+    margin-top: 0;
+    padding-top: 0;
 }
 
 .certificate-solo img:active {
@@ -410,6 +418,8 @@ h2 {
 .certificates-section h1{
     font-size: 37px;
     margin-left: 10px;
+    margin-top: 0;
+    padding-top: 0;
 }
 .certificates-section {
     padding: 10px;
@@ -469,10 +479,9 @@ img {
 
 /* Pie de página */
 .footer {
-    padding: 20px;
+    padding: 5px;
     text-align: center;
-    border-top: 1px solid #333;
-    margin-top: 20px;
+    margin-top: 5px;
 }
 
 .footer p {
@@ -589,6 +598,7 @@ img {
     .titulo-certificado{
         margin-left: 3.4rem;
         padding: 0%;
+        padding-top: 0;
     }
 }
 
@@ -608,5 +618,6 @@ img {
     .titulo-certificado{
         margin-left: 3.4rem;
         padding: 0%;
+        padding-top: 0;
     }
 }
