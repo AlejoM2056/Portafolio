@@ -1,3 +1,4 @@
+
 body {
     font-family: Arial, sans-serif;
     background-color: #111210;
@@ -575,13 +576,15 @@ img {
     border-radius: 8px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
     width: 100%;
-    max-width: 350px;
-    margin-left: 420px;
+    max-width: 400px;
+    margin-left: 30%;
     display: flex;
+    justify-content: center;
     flex-direction: column;
     align-items: center;
     border-bottom: 1px solid #333;
-    padding-right: 40px;
+    padding-left: 0px;
+    
 }
 
 /* Estilos del encabezado */
@@ -734,6 +737,7 @@ img {
     color: #00ff40;
     font-size: 20px;
     text-decoration: none;
+  
 }
 
 .footer .social-links a:hover {
@@ -791,10 +795,7 @@ img {
         /* Añade un margen superior si es necesario */
     }
 
-    .contact-section{
-        margin-left:30px;
-        padding-right: 40px;
-    }
+   
 
 
 
@@ -840,11 +841,7 @@ img {
         margin: 1rem;
     }
 
-    .contact-section{
-        margin-left:30px;
-        padding-right: 40px;
-    }
-
+   
 }
 
 
@@ -879,10 +876,7 @@ img {
         justify-content: center;
     }
 
-    .contact-section{
-        margin-left:30px;
-        padding-right: 40px;
-    }
+    
 }
 
 @media (max-width: 480px) {
@@ -906,11 +900,57 @@ img {
     }
 
     .contact-section{
-        margin-left:30px;
-        padding-right: 40px;
+        margin-left:0px;
+        padding-right: 0px;
     }
 
-
+    .form-control {
+        margin-bottom: 10px;
+        width: 90%;
+        
+    }
+    .btn{
+        padding: 20px;
+        width: 90%;
+        margin-right: 35px;
+    }
+    .contact-section h1 {
+        color: #00ff40;
+        text-align: center;
+        margin: 0 0 20px;
+        font-size: 35px;
+    }
+    .footer {
+        color: #e4e4e4;
+        padding: 5px;
+        text-align: center;
+        clear: both;
+        position: relative;
+        bottom: 0;
+        width: 100%;
+    }
+    
+    .footer p {
+        margin: 0;
+        color: #e4e4e4;
+        font-size: 17px;
+    }
+    
+    .footer .social-links {
+        margin-top: 10px;
+    }
+    
+    .footer .social-links a {
+        margin-right: 10px;
+        color: #00ff40;
+        font-size: 20px;
+        text-decoration: none;
+      
+    }
+    
+    .footer .social-links a:hover {
+        color: #ffffff;
+    }
 }
 
 
