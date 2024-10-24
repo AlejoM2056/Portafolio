@@ -5,8 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <title>Portafolio Alejandro Muñoz</title>
-    <!-- Vinculando el CDN de FontAwesome para los iconos -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <script type="text/javascript"src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script type="text/javascript">emailjs.init('RalYfuGOKD9nSueV_')</script>
+    
 </head>
 <body>
     <!-- Sección de perfil -->
@@ -247,19 +249,45 @@
         </div>
     </section>
 
+    <!-- Sección de contacto -->
+    <section class="contact-section container my-5">
+        <h1 class="text-center mb-4">Contáctame</h1>
+        <form id="contact-form" method="post" class="contact-form">
+            <div class="form-group">
+                <input type="text" name="from_name" class="form-control" placeholder="Tu Nombre" required>
+            </div>
+            <div class="form-group">
+                <input type="email" name="email_id" class="form-control" placeholder="Tu Correo Electrónico" required>
+            </div>
+            <div class="form-group">
+                <textarea name="message" class="form-control" placeholder="Tu Mensaje" required></textarea>
+            </div>
+            <button type="submit" id="send-button" class="btn btn-success btn-block">Enviar</button>
+        </form>
+    </section>
+
+    <div id="success-modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <p>¡Correo enviado exitosamente!</p>
+        </div>
+    </div>
+    
+
     <!-- Pie de página -->
     <footer class="footer container">
-        <p>mdiegoalejandro17@gmail.com</p>
-        
+        <p><a href="mailto:mdiegoalejandro17@gmail.com">mdiegoalejandro17@gmail.com</a></p>
         <p>+57 3145834810</p>
         
         <div class="social-links">
             <a href="https://github.com/Alejomdi193" title="GitHub"><i class="fab fa-github"></i></a>
             <a href="https://www.linkedin.com/in/diegoalejandro-muñoz/" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
             <a href="https://www.canva.com/design/DAF0YLQ0m20/RaiEF4MZXblxoqwlYQgFIg/edit?utm_content=DAF0YLQ0m20&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton" title="Documento"><i class="fas fa-file-alt"></i></a>
-        </div><br>
-        <p>© 2024 ALEJANDRO MUÑOZ ©</p>
+        </div><br><br>
+        <p>&copy; 2024 Diego Alejandro Muñoz Rodriguez. Todos los derechos reservados.</p>
     </footer>
     <script src="script.js"></script>
+    
+
 </body>
 </html>

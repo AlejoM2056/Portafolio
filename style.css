@@ -2,8 +2,8 @@ body {
     font-family: Arial, sans-serif;
     background-color: #111210;
     color: #e4e4e4;
-    margin: 5px;
-    padding: 0px;
+    margin: 1rem;
+    padding: 0.5rem;
     overflow-x: hidden;
 
 
@@ -16,14 +16,28 @@ body {
     padding: 20px;
 }
 
+a {
+    color: #00ff40;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: #ffffff;
+}
 
 h2 {
     color: #ffffff;
     margin-bottom: 10px;
 }
 
+.profile-name {
+
+    font-size: 18px;
+}
+
 .profile-photo-container {
-    width: 300px; 
+    width: 300px;
     height: auto;
     position: relative;
     background: linear-gradient(#1a1a1a);
@@ -105,14 +119,16 @@ h2 {
 
 .social-links {
     margin-top: 10px;
+
 }
 
 .social-links a {
     margin-right: 10px;
     color: #00ff40;
-    font-size: 20px;
+    font-size: 25px;
     text-decoration: none;
     transition: color 0.3s ease;
+
 }
 
 .social-links a:hover {
@@ -175,7 +191,7 @@ h2 {
 
 .tag {
     background: linear-gradient(135deg, #53B365, #33A652);
-    /* Aplicar el gradiente de colores verdes */
+
     color: #ffffff;
     /* Texto blanco */
     padding: 10px 20px;
@@ -487,13 +503,13 @@ h2 {
 /* Eliminar margen superior */
 .certificates-section h1 {
     font-size: 37px;
-    margin-left: 10px;
+    margin-left: 30px;
     margin-top: 0;
     padding-top: 0;
 }
 
 .certificates-section {
-    padding: 10px;
+    padding: 0px;
     padding-top: 0;
     /* Eliminar padding superior */
     margin-top: 0;
@@ -550,11 +566,157 @@ img {
     color: #e4e4e4;
 }
 
+/* Contacto */
+
+
+.contact-section {
+    background-color: #222;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    width: 100%;
+    max-width: 350px;
+    margin-left: 420px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-bottom: 1px solid #333;
+    padding-right: 40px;
+}
+
+/* Estilos del encabezado */
+.contact-section h1 {
+    color: #00ff40;
+    text-align: center;
+    margin: 0 0 20px;
+    font-size: 35px;
+}
+
+/* Estilos generales del formulario */
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 90%;
+
+}
+
+/* Estilos de los grupos de formulario */
+.form-group {
+    margin-bottom: 10px;
+    /* Espacio entre los campos */
+    width: 100%;
+    /* Asegura que ocupe todo el ancho del contenedor */
+}
+
+/* Estilos de los inputs y textarea */
+.form-control {
+    padding: 10px;
+    border: 1.5px solid #00ff40;
+    /* Color del borde */
+    border-radius: 4px;
+    /* Bordes redondeados */
+    background-color: #333;
+    /* Fondo de los inputs */
+    color: #fff;
+    /* Color del texto */
+    transition: border-color 0.3s;
+    /* Transición suave para el borde */
+    width: 100%;
+    /* Ocupa todo el ancho del grupo */
+}
+
+/* Cambiar el color del borde al enfocar */
+.form-control:focus {
+    outline: none;
+    border-color: #00cc00;
+   
+}
+
+/* Estilos del botón */
+.btn {
+    padding: 10px;
+
+    width: 100%;
+    /* Para que ocupe todo el ancho del contenedor */
+    background-color: #00ff40;
+    /* Color del botón */
+    color: #222;
+    /* Color del texto del botón */
+    border: none;
+    /* Sin borde */
+    border-radius: 4px;
+    /* Bordes redondeados */
+    cursor: pointer;
+    /* Cambiar el cursor al pasar el mouse */
+    transition: background-color 0.3s;
+    /* Transición suave para el fondo */
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    margin-left: 26px;
+   
+}
+
+/* Cambiar el fondo del botón al pasar el mouse */
+.btn:hover {
+    background-color: #00cc00;
+    /* Color de fondo al pasar el mouse */
+}
+
+/* Estilo del modal */
+.modal {
+    display: none; /* Ocultarlo por defecto */
+    position: fixed; /* Mantener en posición fija */
+    z-index: 1; /* Mostrarlo por encima de otros elementos */
+    left: 0;
+    top: 0;
+    width: 100%; /* Ancho completo */
+    height: 100%; /* Alto completo */
+    overflow: auto; /* Habilitar desplazamiento si es necesario */
+    background-color: rgba(0, 0, 0, 0.7); /* Fondo semi-transparente */
+}
+
+/* Contenido del modal */
+.modal-content {
+    background-color: #222; /* Fondo del modal */
+    margin: 15% auto; /* Espaciado en la parte superior */
+    padding: 20px; /* Espaciado interno */
+    border: 1px solid #00ff40; /* Borde del modal */
+    border-radius: 8px; /* Bordes redondeados */
+    width: 80%; /* Ancho del modal */
+    max-width: 500px; /* Ancho máximo del modal */
+    color: #00ff40; /* Color del texto */
+    text-align: center; /* Centrar texto */
+}
+
+/* Estilo del botón de cerrar */
+.close {
+    color: #aaa; /* Color del botón de cerrar */
+    float: right; /* A la derecha */
+    font-size: 28px; /* Tamaño del texto */
+    font-weight: bold; /* Negrita */
+}
+
+.close:hover,
+.close:focus {
+    color: #fff; /* Color al pasar el mouse */
+    text-decoration: none; /* Sin subrayado */
+    cursor: pointer; /* Cambiar cursor al pasar el mouse */
+}
+
+
+
 /* Pie de página */
+
 .footer {
+    color: #e4e4e4;
     padding: 5px;
     text-align: center;
-    margin-top: 5px;
+    clear: both;
+    position: relative;
+    bottom: 0;
+    width: 100%;
 }
 
 .footer p {
@@ -616,6 +778,26 @@ img {
     .certificates-gallery {
         grid-template-columns: repeat(2, 1fr);
     }
+
+    .social-links {
+        margin-top: 10px;
+        display: flex;
+        /* Activa Flexbox */
+        align-items: center;
+        /* Alinea los íconos verticalmente al centro */
+        justify-content: center;
+        /* Centra los íconos horizontalmente */
+        margin-top: 10px;
+        /* Añade un margen superior si es necesario */
+    }
+
+    .contact-section{
+        margin-left:30px;
+        padding-right: 40px;
+    }
+
+
+
 }
 
 @media (max-width: 480px) {
@@ -657,6 +839,12 @@ img {
     .titulo-proyect {
         margin: 1rem;
     }
+
+    .contact-section{
+        margin-left:30px;
+        padding-right: 40px;
+    }
+
 }
 
 
@@ -683,6 +871,18 @@ img {
         padding: 0%;
         padding-top: 0;
     }
+
+    .profile-name {
+        margin: 5px 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .contact-section{
+        margin-left:30px;
+        padding-right: 40px;
+    }
 }
 
 @media (max-width: 480px) {
@@ -704,4 +904,14 @@ img {
         padding: 0%;
         padding-top: 0;
     }
+
+    .contact-section{
+        margin-left:30px;
+        padding-right: 40px;
+    }
+
+
 }
+
+
+
