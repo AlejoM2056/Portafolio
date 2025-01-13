@@ -64,7 +64,7 @@ h2 {
     background: #1a1a1a;
     filter: contrast(120%) brightness(0.9);
     border-radius: 15px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 10px 30px rgba(0.5, 0.5, 0.5, 0.5);
     mask-image: linear-gradient(to bottom, rgba(26, 26, 26, 1), rgba(26, 26, 26, 0));
     background-color: transparent;
 
@@ -220,11 +220,7 @@ h2 {
     /* Aumentar la sombra al hacer hover */
 }
 
-.tag:nth-last-child(1),
-.tag:nth-last-child(2) {
-    grid-column: span 2;
-    /* Mantener la estructura original de las últimas etiquetas */
-}
+
 
 .tag span {
     transition: transform 0.3s ease, background 0.3s ease;
@@ -895,7 +891,7 @@ img {
     }
 
     .profile-photo {
-        max-width: 100%; 
+        max-width: 150%; 
         height: auto; 
     }
     .titulo-proyect {
